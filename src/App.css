@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+#dark-theme-container {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#light-theme-container {
+    color: #213547;
+    background-color: #ffffff;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
