@@ -8,11 +8,20 @@
 #dark-theme-container {
     background-color: #121212;
     color: #ffffff;
+    display: flex;
+    width: 500px;
 }
 
 #light-theme-container {
     color: #213547;
     background-color: #ffffff;
+    display: flex;
+    width: 500px;
+
+    & button {
+        color: #000000;
+        background-color: #cfcfcf;
+    }
 }
 
 .logo {

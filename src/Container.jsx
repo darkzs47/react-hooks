@@ -8,7 +8,6 @@ function Container() {
 
     return (
         <div id={`${theme}-theme-container`}>
-            {theme}
             <ChangeThemeButton/>
         </div>
     )
