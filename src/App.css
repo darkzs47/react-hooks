@@ -41,7 +41,7 @@
 
     & input {
         border: 1px solid #ccc;
-        background-color: #ffffff;
+        background-color: #8c8c8c;
         color: #000000;
     }
 }
@@ -70,7 +70,7 @@
 
     & input {
         border: 1px solid #555;
-        background-color: #1e1e1e;
+        background-color: #a1a1a1;
         color: #ffffff;
     }
 }
@@ -91,6 +91,20 @@
         padding: 5px;
         width: 120px;
         font-size: 12px;
+    }
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & button {
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        font-size: 12px;
+        padding: 5px;
     }
 }
 
