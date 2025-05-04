@@ -1,8 +1,9 @@
-import React, {useCallback, useContext, useState} from 'react';
+import React, {useCallback, useContext, useRef, useState} from 'react';
 import {ThemeContext} from './App.jsx';
 import ChangeThemeButton from "./ChangeThemeButton.jsx";
 import UseCallback from "./UseCallback.jsx";
 import SumNumbers from "./SumNumbers.jsx";
+import UseRef from "./UseRef.jsx";
 
 function Container() {
 
@@ -16,6 +17,9 @@ function Container() {
             </div>
             <div id='sum-numbers'>
                 <SumNumbers/>
+            </div>
+            <div>
+                <UseRef/>
             </div>
         </div>
     )

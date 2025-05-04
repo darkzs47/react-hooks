@@ -3,6 +3,19 @@
     margin: 0 auto;
     padding: 0;
     text-align: center;
+
+    & input {
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    & input:focus {
+        outline: none;
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.4);
+    }
 }
 
 #dark-theme-container {
@@ -24,6 +37,12 @@
     & div {
         display: flex;
         justify-content: space-between;
+    }
+
+    & input {
+        border: 1px solid #ccc;
+        background-color: #ffffff;
+        color: #000000;
     }
 }
 
@@ -48,6 +67,12 @@
         display: flex;
         justify-content: space-between;
     }
+
+    & input {
+        border: 1px solid #555;
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
 }
 
 #sum-numbers {
@@ -68,6 +93,7 @@
         font-size: 12px;
     }
 }
+
 .logo {
     height: 6em;
     padding: 1.5em;
