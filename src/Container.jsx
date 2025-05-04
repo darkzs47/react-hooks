@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
 import {ThemeContext} from './App.jsx';
 import ChangeThemeButton from "./ChangeThemeButton.jsx";
+import UseCallback from "./UseCallback.jsx";
+
 
 function Container() {
 
@@ -9,6 +11,7 @@ function Container() {
     return (
         <div id={`${theme}-theme-container`}>
             <ChangeThemeButton/>
+            <UseCallback/>
         </div>
     )
 }
