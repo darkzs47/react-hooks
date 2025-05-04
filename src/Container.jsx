@@ -1,10 +1,11 @@
-import React, {useCallback, useContext, useReducer, useRef, useState} from 'react';
+import React, {useContext} from 'react';
 import {ThemeContext} from './App.jsx';
-import ChangeThemeButton from "./ChangeThemeButton.jsx";
-import UseCallback from "./UseCallback.jsx";
-import SumNumbers from "./SumNumbers.jsx";
-import UseRef from "./UseRef.jsx";
-import Reducer from "./Reducer.jsx";
+import ChangeThemeButton from "./components/ChangeThemeButton.jsx";
+import UseCallback from "./components/UseCallback.jsx";
+import SumNumbers from "./components/SumNumbers.jsx";
+import UseRef from "./components/UseRef.jsx";
+import Reducer from "./components/Reducer.jsx";
+import ReactMemo from "./components/ReactMemo.jsx";
 
 function Container() {
 
@@ -24,6 +25,9 @@ function Container() {
             </div>
             <div id='reducer'>
                 <Reducer/>
+            </div>
+            <div>
+                <ReactMemo/>
             </div>
         </div>
     )

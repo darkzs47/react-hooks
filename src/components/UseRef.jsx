@@ -2,7 +2,7 @@ import React, {useRef, useState} from "react";
 
 function UseRef(){
 
-    const [value, setValue] = useState(null);
+    const [value, setValue] = useState();
 
     const handlerSetValue = () => setValue(inputRef.current.value);
 
