@@ -2,21 +2,25 @@ import React, {useRef, useState} from "react";
 
 function UseRef(){
 
-    const [value, setValue] = useState();
+    const [value, setValue] = useState('');
 
-    const handlerSetValue = () => setValue(inputRef.current.value);
+    const [text, setText] = useState('');
+
+    const handlerSetValue = () => setValue(inputRef.current?.value);
 
     const inputRef = useRef(null);
 
     const focusInput = () => {
-        inputRef.current.focus();
+        inputRef.current?.focus();
+        setText(inputRef.current?.value);
+        setValue('');
     };
 
     return (
         <>
             <input ref={inputRef} onInput={handlerSetValue} value={value} type="text"/>
-            {value}
             <button onClick={focusInput}>Фокус!</button>
+            {text && <p>{text}</p>}
         </>
     )
 }
