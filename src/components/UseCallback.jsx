@@ -1,5 +1,4 @@
 import React, {memo, useCallback, useState} from "react";
-import ListCallback from "./ListCallback.jsx";
 import List from "./List.jsx";
 
 const Button = memo(function ({ handler }) {

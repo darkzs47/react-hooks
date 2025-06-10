@@ -9,7 +9,7 @@ function reducer(state, action) {
             return [
                 ...state,
                 {
-                    id: action.payload.id,
+                    id: Date.now(),
                     text: action.payload.text,
                     completed: false,
                 },
@@ -32,20 +32,19 @@ function reducer(state, action) {
 function Reducer() {
     const [tasks, dispatch] = useReducer(reducer, initialTasks);
 
-    const taskRef = useRef(null);
+    const [text, setText] = React.useState('');
 
     const handleAdd = () => {
-        const text = taskRef.current.value.trim();
-        if (text) {
-            dispatch({type: 'Add', payload: {id: tasks.length, text}});
-            taskRef.current.value = '';
+        if (text.trim()) {
+            dispatch({type: 'Add', payload: {text: text}});
+            setText('');
         }
     };
 
     return (
         <div id="tasks">
             Задачи
-            <input ref={taskRef} type="text"/>
+            <input value={text} onChange={e => setText(e.target.value)} type="text"/>
             <button onClick={handleAdd}>Добавить</button>
             <Tasks tasks={tasks} dispatch={dispatch}/>
         </div>
