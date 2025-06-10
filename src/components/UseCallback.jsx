@@ -1,15 +1,32 @@
-import React, {useCallback, useState} from "react";
+import React, {memo, useCallback, useState} from "react";
 import ListCallback from "./ListCallback.jsx";
 import List from "./List.jsx";
 
+const Button = memo(function ({ handler }) {
+    console.log('Button render');
+    return (
+        <button onClick={handler}>
+            Увеличить
+        </button>
+    )
+})
+
+const ButtonCallback= memo(function ({ handler }) {
+    console.log('ButtonCallback render');
+    return (
+        <button onClick={handler}>
+            Увеличить c useCallback
+        </button>
+    )
+})
+
 export default function UseCallback() {
-    const [callbackCount, setCallbackCount] = useState(0);
 
     const [count, setCount] = useState(0);
 
     const incrementCallback = useCallback(
         () => {
-            setCallbackCount(callbackCount => callbackCount + 1)
+            setCount(count => count + 1)
         }, []);
 
     const increment = (() => {
@@ -18,9 +35,8 @@ export default function UseCallback() {
 
     return (
         <>
-            <button onClick={incrementCallback}>Увеличить с useCallback</button>
-            <button onClick={increment}>Увеличить</button>
-            <ListCallback count={callbackCount}/>
+            <Button handler={increment}/>
+            <ButtonCallback handler={incrementCallback}/>
             <List count={count}/>
         </>
     );

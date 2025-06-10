@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function List({count}) {
-    console.log("render")
+    console.log("List render")
 
     return (
         <ul>
